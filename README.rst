@@ -12,7 +12,7 @@ This application is built using `rumps <https://github.com/jaredks/rumps>`_ (*Ri
 
 Rumps is a lightweight wrapper around pyobjc, allowing for easy creation of simple MacOS applications that exist in the status bar in python.
 
-The application was developed on MacOS 10.11.6. It should run on other versions of MacOS (OS X) 10.7 and higher. 
+The application was developed on MacOS 10.11.6. It should run on other versions of MacOS (OS X) 10.7 and higher (untested!). 
 
 The underlying bits and pieces were installed using MacPorts.
 
@@ -35,6 +35,8 @@ The current time remaining is displayed in the menu as well, in case you are cur
 Installation
 ============
 Download the latest release from [TODO: link to the release]. Unzip, and copy to your Applications folder.
+
+The first time you run the app, you will have to go to the finder and right-click (option-click) and select "Open" from the menu. 
 
 Changing The Parameters
 =======================
@@ -91,6 +93,7 @@ For final deployment, use the following commands to clean up any old builds, and
     
 Then zip up the bundle (you can use the Finder's "compress" command-click menu option as well)::
     
+    $ cd dist
     $ zip -r break-timer.zip break-timer.app
     
 Credits
