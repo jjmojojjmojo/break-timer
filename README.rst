@@ -34,9 +34,9 @@ The current time remaining is displayed in the menu as well, in case you are cur
 
 Installation
 ============
-Download the latest release from [TODO: link to the release]. Unzip, and copy to your Applications folder.
+Download the latest "break-timer.zip" release from `the releases page <https://github.com/jjmojojjmojo/break-timer/releases>`_. Unzip, and copy to your Applications folder.
 
-The first time you run the app, you will have to go to the finder and right-click (option-click) and select "Open" from the menu. 
+The first time you run the app, you will have to go to the Finder and right-click (option-click) and select "Open" from the menu. 
 
 Changing The Parameters
 =======================
