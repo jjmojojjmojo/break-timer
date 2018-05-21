@@ -8,6 +8,7 @@ ICON_DIR = "icons"
 NORMAL_ICON = os.path.join(ICON_DIR, "wind.png")
 ALERT_ICON = os.path.join(ICON_DIR, "alert-circle.png")
 DISABLED_ICON = os.path.join(ICON_DIR, "wind-off.png")
+ON_BREAK_ICON = os.path.join(ICON_DIR, "activity.png")
 
 class BreakTimer:
     """
@@ -73,6 +74,7 @@ class BreakTimer:
         """
         self.paused = True
         self.app.icon = DISABLED_ICON
+        self.checkin = datetime.datetime.now()
         self.work_timer.stop()
         self.time_left_timer.stop()
         self.app.menu['Stop'].title = "Restart"
@@ -84,10 +86,13 @@ class BreakTimer:
         """
         self.paused = False
         self.app.icon = NORMAL_ICON
+        self.delta = self.work_delta
+        self.checkin = datetime.datetime.now()
         self.work_timer.start()
         self.time_left_timer.start()
         self.app.menu['Stop'].title = "Stop"
         self.app.menu['Stop'].set_callback(self.stop)
+        
         
     def bring_to_front(self, timer=None):
         """
@@ -101,6 +106,7 @@ class BreakTimer:
         Popup prompting the user to let the app know when they have returned.
         """
         self.bring_to_front()
+        self.app.icon = ON_BREAK_ICON
         rumps.alert(title="Go On Break", message="Get away from the computer!", ok="Back!")
         self.app.icon = NORMAL_ICON
         self.checkin = datetime.datetime.now()

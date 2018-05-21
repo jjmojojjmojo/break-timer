@@ -4,6 +4,14 @@ TODOs
 
 This file contains outstanding rough edges, enhancements, and new features that are planned for future versions of the application.
 
+On-Break Icon
+=============
+When on break, change the icon to something that indicates you are on break.
+
+.. admonition:: Done
+   
+   Completed in 0.2.
+
 Logarithmic back-off For Nagging
 ================================
 If the user doesn't respond initially to the notification to take a break,
